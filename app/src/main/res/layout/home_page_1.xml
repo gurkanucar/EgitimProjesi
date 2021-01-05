@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <GridLayout
+        android:layout_marginTop="70dp"
+       android:layout_width="match_parent"
+       android:rowCount="2"
+       android:columnCount="3"
+       android:layout_height="wrap_content">
+
+       <androidx.cardview.widget.CardView
+           android:layout_row="0"
+           android:layout_column="0"
+           app:cardBackgroundColor="@color/black1"
+           android:layout_gravity="fill"
+           android:layout_rowWeight="1"
+           android:layout_columnWeight="1"
+            app:cardElevation="0dp"
+           android:layout_margin="8dp"
+           app:cardCornerRadius="8dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:background="@drawable/curved_item_home_page"
+               android:layout_width="115dp"
+               android:gravity="center"
+               android:orientation="vertical"
+               android:layout_height="150dp">
+               <ImageView
+                   android:background="@drawable/ic_baseline_format_list_bulleted_24"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </ImageView>
+               <TextView
+                   android:layout_marginTop="5dp"
+                   android:text="Konu takibi"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:textAllCaps="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+               </TextView>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+
+       <androidx.cardview.widget.CardView
+           android:layout_row="0"
+           android:layout_column="1"
+           app:cardBackgroundColor="@color/black1"
+           android:layout_gravity="fill"
+           android:layout_rowWeight="1"
+           android:layout_columnWeight="1"
+           app:cardElevation="0dp"
+           android:layout_margin="8dp"
+           app:cardCornerRadius="8dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:background="@drawable/curved_item_home_page"
+               android:layout_width="115dp"
+               android:gravity="center"
+               android:orientation="vertical"
+               android:layout_height="150dp">
+               <ImageView
+                   android:background="@drawable/ic_baseline_calculate_24"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </ImageView>
+               <TextView
+                   android:layout_marginTop="5dp"
+                   android:text="soru takibi"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:textAllCaps="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+               </TextView>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+           android:layout_row="0"
+           android:layout_column="2"
+           app:cardBackgroundColor="@color/black1"
+           android:layout_gravity="fill"
+           android:layout_rowWeight="1"
+           android:layout_columnWeight="1"
+           app:cardElevation="0dp"
+           android:layout_margin="8dp"
+           app:cardCornerRadius="8dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:background="@drawable/curved_item_home_page"
+               android:layout_width="115dp"
+               android:gravity="center"
+               android:orientation="vertical"
+               android:layout_height="150dp">
+               <ImageView
+                   android:background="@drawable/ic_baseline_timeline_24"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </ImageView>
+               <TextView
+                   android:layout_marginTop="5dp"
+                   android:text="deneme takibi"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:textAllCaps="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+               </TextView>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+
+       <androidx.cardview.widget.CardView
+           android:layout_row="1"
+           android:layout_column="0"
+           app:cardBackgroundColor="@color/black1"
+           android:layout_gravity="fill"
+           android:layout_rowWeight="1"
+           android:layout_columnWeight="1"
+           app:cardElevation="0dp"
+           android:layout_margin="8dp"
+           app:cardCornerRadius="8dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:background="@drawable/curved_item_home_page"
+               android:layout_width="115dp"
+               android:gravity="center"
+               android:orientation="vertical"
+               android:layout_height="150dp">
+               <ImageView
+                   android:background="@drawable/ic_baseline_info_24"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </ImageView>
+               <TextView
+                   android:layout_marginTop="5dp"
+                   android:text="bilgi kartları"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:textAllCaps="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+               </TextView>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+
+       <androidx.cardview.widget.CardView
+           android:layout_row="1"
+           android:layout_column="1"
+           app:cardBackgroundColor="@color/black1"
+           android:layout_gravity="fill"
+           android:layout_rowWeight="1"
+           android:layout_columnWeight="1"
+           app:cardElevation="0dp"
+           android:layout_margin="8dp"
+           app:cardCornerRadius="8dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:background="@drawable/curved_item_home_page"
+               android:layout_width="115dp"
+               android:gravity="center"
+               android:orientation="vertical"
+               android:layout_height="150dp">
+               <ImageView
+                   android:background="@drawable/ic_baseline_star_24"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </ImageView>
+               <TextView
+                   android:layout_marginTop="5dp"
+                   android:text="yıldız sorular"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:textAllCaps="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+               </TextView>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+       <androidx.cardview.widget.CardView
+           android:layout_row="1"
+           android:layout_column="2"
+           app:cardBackgroundColor="@color/black1"
+           android:layout_gravity="fill"
+           android:layout_rowWeight="1"
+           android:layout_columnWeight="1"
+           app:cardElevation="0dp"
+           android:layout_margin="8dp"
+           app:cardCornerRadius="8dp"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <LinearLayout
+               android:background="@drawable/curved_item_home_page"
+               android:layout_width="115dp"
+               android:gravity="center"
+               android:orientation="vertical"
+               android:layout_height="150dp">
+               <ImageView
+                   android:background="@drawable/ic_baseline_center_focus_strong_24"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+               </ImageView>
+               <TextView
+                   android:layout_marginTop="5dp"
+                   android:text="Odaklanma"
+                   android:textColor="@color/white"
+                   android:textStyle="bold"
+                   android:textAllCaps="true"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+               </TextView>
+           </LinearLayout>
+       </androidx.cardview.widget.CardView>
+
+   </GridLayout>
+
+
+</RelativeLayout>
