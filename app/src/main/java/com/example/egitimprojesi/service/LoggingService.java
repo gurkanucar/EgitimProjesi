@@ -16,7 +16,7 @@ public class LoggingService {
 
     public static void deleteAll(Context context) {
         LoggingRepository loggingRepository = new LoggingRepository(context);
-        List<LogModel> logModels = (List<LogModel>) (Object) loggingRepository.listAll();
+        List<LogModel> logModels = loggingRepository.listAll();
         for (LogModel logModel : logModels) {
             loggingRepository.delete(logModel.getId());
         }
@@ -24,7 +24,7 @@ public class LoggingService {
 
     public static void deleteLast10(Context context) {
         LoggingRepository loggingRepository = new LoggingRepository(context);
-        List<LogModel> logModels = (List<LogModel>) (Object) loggingRepository.listAll();
+        List<LogModel> logModels = loggingRepository.listAll();
         for (int i = 0; i < 10; i++) {
             loggingRepository.delete(logModels.get(i).getId());
         }
