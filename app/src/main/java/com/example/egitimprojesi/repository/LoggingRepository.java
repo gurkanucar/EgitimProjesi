@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class LoggingRepository implements BaseRepository {
+public class LoggingRepository implements BaseRepository<LogModel> {
 
 
     private String[] COLUMNS = {"id","title","detail","date"};
@@ -29,20 +29,9 @@ public class LoggingRepository implements BaseRepository {
     }
 
     @Override
-    public void create(Object object) throws SQLException {
-        sqLiteDatabase = dataBase.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(COLUMNS[1], ((LogModel) object).getTitle());
-        contentValues.put(COLUMNS[2], ((LogModel) object).getDetail());
-        contentValues.put(COLUMNS[3], (String.valueOf(((LogModel) object).getDate())));
-        sqLiteDatabase.insertOrThrow(TABLE_NAME, null, contentValues);
-        sqLiteDatabase.close();
-    }
-
-    @Override
-    public List<Object> listAll() throws SQLException {
+    public List<LogModel> listAll() throws SQLException {
         sqLiteDatabase = dataBase.getReadableDatabase();
-        List<Object> list = new ArrayList<>();
+        List<LogModel> list = new ArrayList<>();
         Cursor cursor = sqLiteDatabase.query(TABLE_NAME,null,null,null,null,null,null);
         while (cursor.moveToNext()){
             LogModel entity = new LogModel();
@@ -56,7 +45,7 @@ public class LoggingRepository implements BaseRepository {
     }
 
     @Override
-    public Object findByID(int id) throws SQLException {
+    public LogModel findByID(int id) throws SQLException {
         sqLiteDatabase = dataBase.getReadableDatabase();
         Cursor cursor = sqLiteDatabase.query(TABLE_NAME,null,null,null,null,null,null);
         LogModel entity = new LogModel();
@@ -74,14 +63,26 @@ public class LoggingRepository implements BaseRepository {
         return null;
     }
 
+
     @Override
-    public void update(Object object) throws SQLException {
+    public void create(LogModel object) throws SQLException {
         sqLiteDatabase = dataBase.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(COLUMNS[1], ((LogModel) object).getTitle());
-        contentValues.put(COLUMNS[2], ((LogModel) object).getDetail());
-        contentValues.put(COLUMNS[3], ((LogModel) object).getDate());
-        sqLiteDatabase.update(TABLE_NAME, contentValues, "id=" + ((LogModel) object).getId(), null);
+        contentValues.put(COLUMNS[1], object.getTitle());
+        contentValues.put(COLUMNS[2], object.getDetail());
+        contentValues.put(COLUMNS[3], (String.valueOf(object.getDate())));
+        sqLiteDatabase.insertOrThrow(TABLE_NAME, null, contentValues);
+        sqLiteDatabase.close();
+    }
+
+    @Override
+    public void update(LogModel object) throws SQLException {
+        sqLiteDatabase = dataBase.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMNS[1], object.getTitle());
+        contentValues.put(COLUMNS[2], object.getDetail());
+        contentValues.put(COLUMNS[3], object.getDate());
+        sqLiteDatabase.update(TABLE_NAME, contentValues, "id=" + object.getId(), null);
     }
 
     @Override

@@ -4,17 +4,17 @@ import android.database.SQLException;
 
 import java.util.List;
 
-public interface BaseRepository {
+public interface BaseRepository<T> {
 
-    void create(Object object) throws SQLException ;
+    void create(T object) throws SQLException ;
 
-    void update(Object object) throws SQLException ;
+    void update(T object) throws SQLException ;
 
     void delete(int id) throws SQLException ;
 
-    List<Object> listAll() throws SQLException ;
+    List<T> listAll() throws SQLException ;
 
-    Object findByID(int id) throws SQLException ;
+    T findByID(int id) throws SQLException ;
 
 
 }
