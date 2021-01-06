@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:id="@+id/log_item_linear_layout">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <TextView
+            android:textColor="@color/dark_gray"
+            android:id="@+id/log_item_title"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:text="Baslik"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content">
         </TextView>
         <TextView
+            android:textColor="@color/dark_gray"
+            android:id="@+id/log_item_date"
             android:layout_margin="10dp"
             android:gravity="end"
             android:layout_weight="1"
             android:text="Tarih"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content">
         </TextView>
     </LinearLayout>
 
     <TextView
+        android:textColor="@color/dark_gray"
+        android:id="@+id/log_item_detail"
         android:layout_margin="10dp"
         android:text="detay"
-        android:textSize="22sp"
+        android:textSize="18sp"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
     </TextView>
