@@ -9,8 +9,12 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.egitimprojesi.model.LogModel;
 
 import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class LoggingRepository implements BaseRepository {
 
@@ -61,7 +65,9 @@ public class LoggingRepository implements BaseRepository {
                 entity.setId(cursor.getInt((cursor.getColumnIndex(COLUMNS[0]))));
                 entity.setTitle(cursor.getString(cursor.getColumnIndex(COLUMNS[1])));
                 entity.setDetail(cursor.getString(cursor.getColumnIndex(COLUMNS[2])));
-                entity.setDate(cursor.getString(cursor.getColumnIndex(COLUMNS[3])));
+                SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+                String dateString = cursor.getString(cursor.getColumnIndex(COLUMNS[3]));
+                entity.setDate(formatter.format(dateString));
                 return entity;
             }
         }

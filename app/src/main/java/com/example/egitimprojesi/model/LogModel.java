@@ -1,22 +1,28 @@
 package com.example.egitimprojesi.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class LogModel {
 
     private int id;
     private String title;
     private String detail;
-    private String date = Calendar.getInstance().getTime().toString();
+    private String date;
 
-    public LogModel(Builder builder){
-        this.id=builder.id;
-        this.title=builder.title;
-        this.detail=builder.title;
-        this.date=builder.date;
+    public LogModel(Builder builder) {
+        this.id = builder.id;
+        this.title = builder.title;
+        this.detail = builder.title;
+        String pattern = "MM/dd/yyyy HH:mm";
+        DateFormat df = new SimpleDateFormat(pattern);
+        Date today = Calendar.getInstance().getTime();
+        this.date = df.format(today);
     }
 
-    public LogModel(){
+    public LogModel() {
     }
 
     public int getId() {
@@ -52,32 +58,37 @@ public class LogModel {
     }
 
 
-    public static class Builder{
+    public static class Builder {
 
         private int id;
         private String title;
         private String detail;
-        private String date = Calendar.getInstance().getTime().toString();
+        private String date;
 
-        public Builder(){ }
+        public Builder() {
+            String pattern = "MM/dd/yyyy HH:mm";
+            DateFormat df = new SimpleDateFormat(pattern);
+            Date today = Calendar.getInstance().getTime();
+            this.date = df.format(today);
+        }
 
         public Builder id(int id) {
-            this.id=id;
+            this.id = id;
             return this;
         }
 
         public Builder title(String title) {
-            this.title=title;
+            this.title = title;
             return this;
         }
 
         public Builder detail(String detail) {
-            this.detail=detail;
+            this.detail = detail;
             return this;
         }
 
         public Builder dateTime(String date) {
-            this.date=date;
+            this.date = date;
             return this;
         }
 
