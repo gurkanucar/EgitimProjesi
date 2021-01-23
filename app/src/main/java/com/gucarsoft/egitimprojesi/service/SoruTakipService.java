@@ -5,6 +5,7 @@ import android.content.Context;
 import com.gucarsoft.egitimprojesi.model.SoruModel;
 import com.gucarsoft.egitimprojesi.repository.SoruRepository;
 
+import java.util.Collections;
 import java.util.List;
 
 public class SoruTakipService {
@@ -16,7 +17,9 @@ public class SoruTakipService {
 
     public static List<SoruModel> findAll(Context context){
         SoruRepository soruRepository = new SoruRepository(context);
-        return soruRepository.listAll();
+       List<SoruModel> list = soruRepository.listAll();
+       Collections.reverse(list);
+        return list;
     }
 
 
