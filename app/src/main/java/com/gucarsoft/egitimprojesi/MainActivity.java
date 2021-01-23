@@ -1,4 +1,4 @@
-package com.example.egitimprojesi;
+package com.gucarsoft.egitimprojesi;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,12 +9,12 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.egitimprojesi.adapter.MainTabsPagerAdapter;
-import com.example.egitimprojesi.view.mainFragments.ForumMain;
-import com.example.egitimprojesi.view.mainFragments.HomeMain;
-import com.example.egitimprojesi.view.mainFragments.ProgramMain;
-import com.example.egitimprojesi.view.mainFragments.SettingsMain;
-import com.example.egitimprojesi.view.mainFragments.ToDoMain;
+import com.gucarsoft.egitimprojesi.adapter.MainTabsPagerAdapter;
+import com.gucarsoft.egitimprojesi.view.mainFragments.ForumMain;
+import com.gucarsoft.egitimprojesi.view.mainFragments.HomeMain;
+import com.gucarsoft.egitimprojesi.view.mainFragments.ProgramMain;
+import com.gucarsoft.egitimprojesi.view.mainFragments.SettingsMain;
+import com.gucarsoft.egitimprojesi.view.mainFragments.ToDoMain;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
