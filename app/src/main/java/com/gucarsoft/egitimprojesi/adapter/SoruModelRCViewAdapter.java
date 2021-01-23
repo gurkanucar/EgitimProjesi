@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -44,8 +43,15 @@ public class SoruModelRCViewAdapter extends RecyclerView.Adapter<SoruModelRCView
         holder.goal.setText(list.get(position).getGoal()+"");
         holder.done.setText(list.get(position).getDone()+"");
         holder.left.setText(list.get(position).getGoal()-list.get(position).getDone()+"");
-        holder.progressBar.setProgress((int)(100*list.get(position).getDone())/list.get(position).getGoal());
-        holder.viewProgress.setText("%"+(int)(100*list.get(position).getDone())/list.get(position).getGoal());
+        int progressValue =(int) (100*list.get(position).getDone()/list.get(position).getGoal());
+        if (progressValue<2){
+            holder.progressBar.setProgress(1);
+        }
+        else{
+            holder.progressBar.setProgress(progressValue);
+        }
+
+        holder.viewProgress.setText("%"+progressValue);
 
     }
 
