@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center">
 
    <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/soru_takip_rc_view"
        android:layout_marginTop="10dp"
        android:layout_marginRight="10dp"
        android:layout_marginLeft="10dp"
        android:layout_marginBottom="50dp"
-       android:id="@+id/home_page_2_rc_view"
        android:layout_width="match_parent"
        android:layout_height="match_parent">
+
    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>
